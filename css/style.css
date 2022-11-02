@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Kolker+Brush&family=Noto+Sans:wght@300&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Navbar styling */
+nav{
+    background-color: #101820FF;
+    color: #FEE715FF;
+    height: 52px;
+    font-size: 51px;
+    padding: 0 23px;
+    display: flex;
+    align-items: center;
+    font-family: 'Kolker Brush', cursive;
+}
+nav ul{
+    list-style-type: none;
+}
+/* Navbar styling ends */
+
+/* Gameplay container styling */
+.Mcon{
+    display: flex;
+    justify-content: end;
+    margin:10px 23px;
+}
+.gameDisplay{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.gameInfo h1{
+    font-size: 90px;
+    font-family: 'Kolker Brush', cursive;
+    text-shadow: 1px 1px 10px #FEE715FF;
+}
+.info{
+ font-family: 'Noto Sans', sans-serif;
+ font-size: 33px;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+    font-family: 'Kolker Brush', cursive;
+    position: relative;
+}
+
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+justify-content: center;
+align-items: center;
+transition: background-color 0.3s ease-in-out;
+}
+.box:hover{
+    background-color: rgba(194, 235, 13, 0.459);
+}
+.gameInfo{
+    padding: 34px;
+}
+.iamge img{
+    width: 0;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.iamge img:hover{
+    transform: rotate(60deg);
+}
+/* Gameplay container styling ends*/ 
+
+/*Styling for Line over when a player wins */
+.line{
+    background-color: #FEE715FF;
+    height: 4px;
+    box-shadow: 1px 1px 10px gray;
+    width: 0vw;
+   position: absolute;
+   transition: width 1s ease-in-out;
+}
+/*Styling for Line over when a player wins  ends*/
+
+/* Footer styling */
+.footer{
+    margin-top:23px;
+    height: 225px;
+    background-color: #FEE715FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Noto Sans', sans-serif;
+    border-top: 2px solid black;
+    box-shadow: 1px 1px 8px black;
+    font-size: 1.5em;
+}
+/* Footer styling ends */
+
+/* Utlity classes */
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+
+/*Button classes */
+#reset{
+    outline: none;
+   margin:0 23px;
+   padding: 5px;
+   width: 152px;
+   border: none;
+   background-color: #F4DF4EFF;
+   color: black;
+   border-radius: 10px;
+   font-size: 1.4em;
+   cursor: pointer;
+   transition: all 0.3s ease;
+}
+
+#reset:hover{
+    color:#949398FF;
+    box-shadow: 1px 1px 4px gray;
+    transform: rotate(5deg);
+}
+
+.soundbtn{
+    outline: none;
+   margin:0 23px;
+   padding: 5px;
+   width: 50px;
+   height: 50px;
+   border: none;
+   background-color: #F4DF4EFF;
+   color: black;
+   border-radius: 100px;
+   font-size: 1.4em;
+   cursor: pointer;
+   transition: all 0.3s ease;
+}
+.soundbtn:hover{
+    color:#949398FF;
+    box-shadow: 1px 1px 4px gray;
+}
+
+
+@media screen and (max-width:600px){
+    .gameDisplay{
+        flex-wrap:wrap;
+    }
+    
+    .container{
+        grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+    }
+    .iamge{
+        text-align: center;
+    }
+    .gameInfo h1{
+        /* font-size: 3.9em; */
+        text-align: center;
+    }
+    .InfoResetBox{
+        text-align: center;
+    }
+    .footer{
+        font-size: 9px;
+    }
+}
+
+@media screen and (max-width:375px){
+    .gameInfo h1{
+        font-size: 2.9em;
+    }
+
+    .footer{
+        font-size: 7px;
+    }
+}
